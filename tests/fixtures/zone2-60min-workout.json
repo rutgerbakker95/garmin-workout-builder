@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "sport": "cycling",
+  "name": "60 min Zone 2 with 4 short tempo efforts",
+  "description": "Endurance ride with four controlled one-minute tempo efforts.",
+  "steps": [
+    {
+      "type": "warmup",
+      "duration_seconds": 600,
+      "target": {"type": "ftp_percent", "min_percent": 50, "max_percent": 60}
+    },
+    {
+      "type": "interval",
+      "duration_seconds": 900,
+      "target": {"type": "ftp_percent", "min_percent": 60, "max_percent": 70}
+    },
+    {
+      "type": "repeat",
+      "iterations": 4,
+      "steps": [
+        {
+          "type": "interval",
+          "duration_seconds": 60,
+          "target": {"type": "ftp_percent", "min_percent": 80, "max_percent": 90}
+        },
+        {
+          "type": "recovery",
+          "duration_seconds": 240,
+          "target": {"type": "ftp_percent", "min_percent": 60, "max_percent": 70}
+        }
+      ]
+    },
+    {
+      "type": "interval",
+      "duration_seconds": 600,
+      "target": {"type": "ftp_percent", "min_percent": 60, "max_percent": 70}
+    },
+    {
+      "type": "cooldown",
+      "duration_seconds": 300,
+      "target": {"type": "ftp_percent", "min_percent": 40, "max_percent": 50}
+    }
+  ]
+}

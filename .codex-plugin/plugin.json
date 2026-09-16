@@ -1,0 +1,27 @@
+{
+  "name": "garmin-workout-builder",
+  "version": "0.1.0+codex.20260916073605",
+  "description": "Create validated Garmin cycling workout JSON files from natural-language requests.",
+  "author": {
+    "name": "Rutger Bakker"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Garmin Workout Builder",
+    "shortDescription": "Create importable Garmin cycling workouts.",
+    "longDescription": "Turns a planned cycling workout into a validated JSON file for Share your Garmin Connect workout.",
+    "developerName": "Rutger Bakker",
+    "category": "Productivity",
+    "capabilities": [
+      "Write"
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "logoDark": "./assets/icon.png",
+    "defaultPrompt": [
+      "Maak een Garmin fietstraining voor morgen.",
+      "Maak 5x3 minuten VO2max op FTP 300.",
+      "Maak een opener-training voor mijn lange rit zaterdag."
+    ]
+  }
+}

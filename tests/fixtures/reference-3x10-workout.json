@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "sport": "cycling",
+  "name": "3x10 donderdag",
+  "description": null,
+  "steps": [
+    {
+      "type": "warmup",
+      "duration_seconds": 1200,
+      "target": {"type": "ftp_percent", "min_percent": 50, "max_percent": 70}
+    },
+    {
+      "type": "repeat",
+      "iterations": 3,
+      "steps": [
+        {
+          "type": "interval",
+          "duration_seconds": 600,
+          "target": {"type": "ftp_percent", "min_percent": 88, "max_percent": 94}
+        },
+        {
+          "type": "recovery",
+          "duration_seconds": 300,
+          "target": {"type": "ftp_percent", "min_percent": 45, "max_percent": 55}
+        }
+      ]
+    },
+    {
+      "type": "interval",
+      "duration_seconds": 900,
+      "target": {"type": "ftp_percent", "min_percent": 60, "max_percent": 70}
+    },
+    {
+      "type": "cooldown",
+      "duration_seconds": 600,
+      "target": {"type": "ftp_percent", "min_percent": 35, "max_percent": 55}
+    }
+  ]
+}
