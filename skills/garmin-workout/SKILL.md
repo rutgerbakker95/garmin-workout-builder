@@ -59,17 +59,19 @@ Use `{ "type": "none" }` for a step without a power target. Use `{ "type": "ftp_
 
 ## Export
 
-Run the bundled script after creating the internal document:
+Resolve paths relative to the directory containing this `SKILL.md`, not the current working directory. Read [the workout contract](references/workout-contract.md) when additional field details are needed.
+
+Run the bundled script after creating the internal document. Replace `/path/to/garmin-workout` with this skill's actual directory and use a writable output directory that supports downloadable files in the current environment:
 
 ```bash
-python3 skills/garmin-workout/scripts/export_workout.py \
+python3 /path/to/garmin-workout/scripts/export_workout.py \
   --input /tmp/input.json \
   --output /tmp/garmin-workout.json
 ```
 
 If the exporter returns an error, correct only the internal workout document and run it again. Never fix the generated Garmin JSON by hand.
 
-The installed private plugin contains `assets/garmin-reference.json`, a working Garmin export supplied by the user. The exporter loads it by default. Do not display, return, modify, or add this private reference to version control.
+This skill contains `assets/garmin-reference.json`, a public template with synthetic account and workout identifiers, derived from a working Garmin export. The exporter loads it by default, independently of the current working directory. The sanitized template still requires a live Garmin import test. If the reference is missing or Python execution is unavailable, report the blocker instead of fabricating an export.
 
 Return the generated `.json` file as a download, followed by a compact summary of the workout and its computed total duration. Do not claim that the file was imported into Garmin unless the user has actually confirmed the Chrome-extension import.
 
@@ -77,4 +79,4 @@ Return the generated `.json` file as a download, followed by a compact summary o
 
 - Do not use Garmin credentials, APIs, scraping, calendar scheduling, or account data.
 - Do not add running, cadence, heart-rate, distance, ramp, open-ended, or nested-repeat steps.
-- Do not generate or clear Garmin IDs. The exporter clones the locally configured, working Garmin reference export and changes only proven workout fields.
+- Do not generate or clear Garmin IDs. The exporter clones the bundled Garmin reference template and changes only proven workout fields.

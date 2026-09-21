@@ -2,3 +2,9 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 assets/garmin-reference.json
+dist/
+.venv/
+.vercel/
+.env*
+!.env.example
+.vercel

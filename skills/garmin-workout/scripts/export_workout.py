@@ -49,7 +49,7 @@ def _read_json(path: Path) -> Any:
 
 
 def _default_reference_path() -> Path:
-    return Path(__file__).resolve().parents[3] / "assets" / "garmin-reference.json"
+    return Path(__file__).resolve().parents[1] / "assets" / "garmin-reference.json"
 
 
 def _write_json(path: Path, value: Any) -> None:

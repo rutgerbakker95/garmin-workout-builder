@@ -1,0 +1,266 @@
+{
+  "workoutId": 100000001,
+  "ownerId": 200000001,
+  "workoutName": "Reference workout",
+  "description": null,
+  "updatedDate": "2026-01-01T12:00:00.0",
+  "createdDate": "2026-01-01T12:00:00.0",
+  "sportType": {
+    "sportTypeId": 2,
+    "sportTypeKey": "cycling",
+    "displayOrder": 2
+  },
+  "subSportType": null,
+  "trainingPlanId": null,
+  "author": {
+    "userProfilePk": 200000001,
+    "displayName": "reference",
+    "fullName": "Reference",
+    "profileImgNameLarge": null,
+    "profileImgNameMedium": null,
+    "profileImgNameSmall": null,
+    "userPro": false,
+    "vivokidUser": false
+  },
+  "sharedWithUsers": null,
+  "estimatedDurationInSecs": 5400,
+  "estimatedDistanceInMeters": 45000.0,
+  "workoutSegments": [
+    {
+      "segmentOrder": 1,
+      "sportType": {
+        "sportTypeId": 2,
+        "sportTypeKey": "cycling",
+        "displayOrder": 2
+      },
+      "poolLengthUnit": null,
+      "poolLength": null,
+      "avgTrainingSpeed": null,
+      "estimatedDurationInSecs": null,
+      "estimatedDistanceInMeters": null,
+      "estimatedDistanceUnit": null,
+      "estimateType": null,
+      "description": null,
+      "workoutSteps": [
+        {
+          "type": "ExecutableStepDTO",
+          "stepId": 300000001,
+          "stepOrder": 1,
+          "stepType": {
+            "stepTypeId": 1,
+            "stepTypeKey": "warmup",
+            "displayOrder": 1
+          },
+          "childStepId": null,
+          "description": null,
+          "endCondition": {
+            "conditionTypeId": 2,
+            "conditionTypeKey": "time",
+            "displayOrder": 2,
+            "displayable": true
+          },
+          "endConditionValue": 1200.0,
+          "preferredEndConditionUnit": null,
+          "endConditionCompare": "gt",
+          "targetType": {
+            "workoutTargetTypeId": 2,
+            "workoutTargetTypeKey": "power.zone",
+            "displayOrder": 2
+          },
+          "targetValueOne": 50.0,
+          "targetValueTwo": 70.0,
+          "targetValueUnit": {
+            "unitId": 253,
+            "unitKey": "percent",
+            "factor": 1.0
+          },
+          "zoneNumber": null
+        },
+        {
+          "type": "RepeatGroupDTO",
+          "stepId": 300000002,
+          "stepOrder": 2,
+          "stepType": {
+            "stepTypeId": 6,
+            "stepTypeKey": "repeat",
+            "displayOrder": 6
+          },
+          "childStepId": 1,
+          "numberOfIterations": 3,
+          "workoutSteps": [
+            {
+              "type": "ExecutableStepDTO",
+              "stepId": 300000003,
+              "stepOrder": 3,
+              "stepType": {
+                "stepTypeId": 3,
+                "stepTypeKey": "interval",
+                "displayOrder": 3
+              },
+              "childStepId": 1,
+              "description": null,
+              "endCondition": {
+                "conditionTypeId": 2,
+                "conditionTypeKey": "time",
+                "displayOrder": 2,
+                "displayable": true
+              },
+              "endConditionValue": 600.0,
+              "preferredEndConditionUnit": null,
+              "endConditionCompare": null,
+              "targetType": {
+                "workoutTargetTypeId": 2,
+                "workoutTargetTypeKey": "power.zone",
+                "displayOrder": 2
+              },
+              "targetValueOne": 88.0,
+              "targetValueTwo": 94.0,
+              "targetValueUnit": {
+                "unitId": 253,
+                "unitKey": "percent",
+                "factor": 1.0
+              },
+              "zoneNumber": null
+            },
+            {
+              "type": "ExecutableStepDTO",
+              "stepId": 300000004,
+              "stepOrder": 4,
+              "stepType": {
+                "stepTypeId": 4,
+                "stepTypeKey": "recovery",
+                "displayOrder": 4
+              },
+              "childStepId": 1,
+              "description": null,
+              "endCondition": {
+                "conditionTypeId": 2,
+                "conditionTypeKey": "time",
+                "displayOrder": 2,
+                "displayable": true
+              },
+              "endConditionValue": 300.0,
+              "preferredEndConditionUnit": null,
+              "endConditionCompare": null,
+              "targetType": {
+                "workoutTargetTypeId": 2,
+                "workoutTargetTypeKey": "power.zone",
+                "displayOrder": 2
+              },
+              "targetValueOne": 45.0,
+              "targetValueTwo": 55.0,
+              "targetValueUnit": {
+                "unitId": 253,
+                "unitKey": "percent",
+                "factor": 1.0
+              },
+              "zoneNumber": null
+            }
+          ],
+          "endConditionValue": 3.0,
+          "preferredEndConditionUnit": null,
+          "endConditionCompare": null,
+          "endCondition": {
+            "conditionTypeId": 7,
+            "conditionTypeKey": "iterations",
+            "displayOrder": 7,
+            "displayable": false
+          },
+          "skipLastRestStep": null,
+          "smartRepeat": false
+        },
+        {
+          "type": "ExecutableStepDTO",
+          "stepId": 300000005,
+          "stepOrder": 5,
+          "stepType": {
+            "stepTypeId": 3,
+            "stepTypeKey": "interval",
+            "displayOrder": 3
+          },
+          "childStepId": null,
+          "description": null,
+          "endCondition": {
+            "conditionTypeId": 2,
+            "conditionTypeKey": "time",
+            "displayOrder": 2,
+            "displayable": true
+          },
+          "endConditionValue": 900.0,
+          "preferredEndConditionUnit": null,
+          "endConditionCompare": null,
+          "targetType": {
+            "workoutTargetTypeId": 2,
+            "workoutTargetTypeKey": "power.zone",
+            "displayOrder": 2
+          },
+          "targetValueOne": 60.0,
+          "targetValueTwo": 70.0,
+          "targetValueUnit": {
+            "unitId": 253,
+            "unitKey": "percent",
+            "factor": 1.0
+          },
+          "zoneNumber": null
+        },
+        {
+          "type": "ExecutableStepDTO",
+          "stepId": 300000006,
+          "stepOrder": 6,
+          "stepType": {
+            "stepTypeId": 2,
+            "stepTypeKey": "cooldown",
+            "displayOrder": 2
+          },
+          "childStepId": null,
+          "description": null,
+          "endCondition": {
+            "conditionTypeId": 2,
+            "conditionTypeKey": "time",
+            "displayOrder": 2,
+            "displayable": true
+          },
+          "endConditionValue": 600.0,
+          "preferredEndConditionUnit": null,
+          "endConditionCompare": "gt",
+          "targetType": {
+            "workoutTargetTypeId": 2,
+            "workoutTargetTypeKey": "power.zone",
+            "displayOrder": 2
+          },
+          "targetValueOne": 35.0,
+          "targetValueTwo": 55.0,
+          "targetValueUnit": {
+            "unitId": 253,
+            "unitKey": "percent",
+            "factor": 1.0
+          },
+          "zoneNumber": null
+        }
+      ]
+    }
+  ],
+  "poolLength": null,
+  "poolLengthUnit": null,
+  "locale": null,
+  "workoutProvider": null,
+  "workoutSourceId": null,
+  "uploadTimestamp": null,
+  "atpPlanId": null,
+  "consumer": null,
+  "consumerName": null,
+  "consumerImageURL": null,
+  "consumerWebsiteURL": null,
+  "workoutNameI18nKey": null,
+  "descriptionI18nKey": null,
+  "avgTrainingSpeed": 8.3,
+  "estimateType": "DISTANCE_ESTIMATED",
+  "estimatedDistanceUnit": {
+    "unitId": null,
+    "unitKey": null,
+    "factor": null
+  },
+  "workoutThumbnailUrl": "https://example.invalid/workout-thumbnail",
+  "isSessionTransitionEnabled": null,
+  "shared": false
+}

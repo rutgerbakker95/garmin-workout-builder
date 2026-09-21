@@ -1,0 +1,8 @@
+.venv
+.git
+.env*
+!.env.example
+dist
+tests
+**/__pycache__
+/assets/garmin-reference.json
